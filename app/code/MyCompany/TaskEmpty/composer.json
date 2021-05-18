@@ -1,4 +1,4 @@
-  {
+{
     "name": "mycompany/module-taskempty",
     "description": "N/A",
     "type": "magento2-module",
@@ -15,6 +15,8 @@
       "psr-4": {
         "MyCompany\\TaskEmpty\\": ""
       }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6"
     }
-  }
-
+}
