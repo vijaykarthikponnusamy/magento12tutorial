@@ -15,8 +15,5 @@
       "psr-4": {
         "MyCompany\\TaskEmpty\\": ""
       }
-    },
-    "require-dev": {
-        "squizlabs/php_codesniffer": "^3.6"
     }
 }

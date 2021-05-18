@@ -1,0 +1,21 @@
+
+{
+    "name": "mycompany/simple",
+    "description": "N/A",
+    "require": {
+        "php": "~7.3.0|~7.4.0",
+        "magento/theme-frontend-luma": "100.1.*",
+        "magento/framework": "100.1.*"
+    },
+    "type": "magento2-theme",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    }
+}
