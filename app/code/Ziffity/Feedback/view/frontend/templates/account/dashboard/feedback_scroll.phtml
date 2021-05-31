@@ -1,0 +1,25 @@
+<?php
+
+$helper = $this->helper('Ziffity\Feedback\Helper\Data');
+$collection = $helper->getFeedback();
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+if($customerSession->isLoggedIn()):
+?>
+<div class="block block-dashboard-addresses">
+    <div class="block-title">
+        <strong>Customer Feedback</strong>
+    </div>
+</div>
+
+<h3 class="page-title">
+    <marquee>
+    <?php foreach($collection as $item){ ?>
+        <span class="base" data-ui-id="page-title-wrapper"> <?php echo $item->getComment(); ?> | </span>
+    <?php } ?>
+    </marquee>
+    </span>
+</h3>
+
+<?php endif; ?>

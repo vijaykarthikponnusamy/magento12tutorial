@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+     <add id="Ziffity_Feedback::custom_feedback_view" title="Customer Feedback" module="Ziffity_Feedback" sortOrder="31" action="viewcustomfeedback/view/index" resource="Ziffity_Feedback::customer_feedback"/>
+    </menu>
+</config>

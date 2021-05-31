@@ -1,0 +1,111 @@
+<?php
+$feedbackDetail = $this->getDetail();
+?>
+
+<div id="messages"><div class="messages"></div></div>
+
+<div class="page-main-actions">
+    <div class="page-actions">
+        <div class="page-actions-inner">
+            <div class="page-actions-buttons">                
+                <?php echo $block->getButtonHtml(); ?>
+
+                <?php echo $block->getDeclineButtonHtml(); ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="table-wrapper">
+    <table class="data table">
+        <tbody>
+        <tr>
+            <td class="col id">Fname</td>
+            <td class="col name">
+               : <?php echo $feedbackDetail->getFname() ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="col id">Lname</td>
+            <td class="col name">
+            : <?php echo $feedbackDetail->getLname() ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="col id">Email</td>
+            <td class="col name">
+              :  <?php echo $feedbackDetail->getEmail() ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="col id">Comment</td>
+            <td class="col name">
+              :  <?php echo $feedbackDetail->getComment() ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="col id">Create Date</td>
+            <td class="col name">
+               : <?php echo $feedbackDetail->getCdate() ?>
+            </td>
+        </tr>
+        <tr>
+            <td class="col id">Status</td>
+            <td class="col name">
+               : <?php echo $feedbackDetail->getStatus() ?>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<script>
+require(['jquery'],function(){
+    jQuery(document).ready(function() {
+        jQuery("#idAccept").click(function(){
+            
+            var feedbackId = "<?php echo $feedbackDetail->getId(); ?>";
+
+            var url = "<?php echo $block->getAcceptUrl() ?>";
+
+            jQuery.ajax({
+            url: url,
+            type: "POST",
+            data: {id:feedbackId},
+            showLoader: true,
+            cache: false,
+            success: function(response){
+                console.log(response.output);
+                jQuery(".messages").html("<div class='message message-success success'>Your feedback have been Approved successfully, mail has sent to your email.</div>");
+            }
+        });
+        return false;
+        });
+    });
+});
+
+require(['jquery'],function(){
+    jQuery(document).ready(function() {
+        jQuery("#idDecline").click(function(){
+            
+            var feedbackId = "<?php echo $feedbackDetail->getId(); ?>";
+
+            var url = "<?php echo $block->getDeclineUrl() ?>";
+
+            jQuery.ajax({
+            url: url,
+            type: "POST",
+            data: {id:feedbackId},
+            showLoader: true,
+            cache: false,
+            success: function(response){
+                console.log(response.output);
+                jQuery(".messages").html("<div class='message message-success success'>Your feedback have been Declined successfully, mail has sent to your email.</div>");
+            }
+        });
+        return false;
+        });
+    });
+});
+</script>

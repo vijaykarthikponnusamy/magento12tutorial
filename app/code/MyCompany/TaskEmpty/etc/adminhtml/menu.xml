@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+     <add id="MyCompany_TaskEmpty::menu" title="Custom Menu" module="MyCompany_TaskEmpty" sortOrder="10" resource="MyCompany_TaskEmpty::menu"/>
+     <add id="MyCompany_TaskEmpty::menu_item_create" title="Create" module="MyCompany_TaskEmpty" sortOrder="10" parent="MyCompany_TaskEmpty::menu" action="createmenuroute/create/index" resource="MyCompany_TaskEmpty::create"/>
+     <add id="MyCompany_TaskEmpty::menu_item_delete" title="Delete" module="MyCompany_TaskEmpty" sortOrder="20" parent="MyCompany_TaskEmpty::menu" action="createmenuroute/delete/index" resource="MyCompany_TaskEmpty::delete"/>
+     <add id="MyCompany_TaskEmpty::menu_item_view" title="View" module="MyCompany_TaskEmpty" sortOrder="30" parent="MyCompany_TaskEmpty::menu" action="createmenuroute/view/index" resource="MyCompany_TaskEmpty::view"/>
+     
+     <add id="MyCompany_TaskEmpty::menu_item_edit" title="Edit" module="MyCompany_TaskEmpty" sortOrder="40" parent="MyCompany_TaskEmpty::menu" action="createmenuroute/edit/index" resource="MyCompany_TaskEmpty::edit" />
+    </menu>
+</config>
