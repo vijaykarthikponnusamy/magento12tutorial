@@ -1,0 +1,24 @@
+
+
+<script>
+    require([
+        "jquery",
+        "jquery/ui",
+        "Ziffity_Feedback/js/toggle"], function ($) {
+            
+            $("#toggle").toggleAdvanced();
+    };        
+</script>
+
+<div class="toggle-example">
+    <div class="toggle-wrap">
+        <a href="#"
+           data-mage-init='{"toggleAdvanced": {"selectorsToggleClass": "hidden", "baseToggleClass": "expand ", "toggleContainers": "#toggleContainer", "newLabel": "Hide Pre-order form"}}'
+           id="toggle"
+           title="Title"
+           class="action">Pre-order form</a>
+    </div>
+    <div class="toggle-container" id="toggleContainer">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad autem, corporis ducimus ex in ipsam minima nisi nulla officiis omnis quae quaerat quasi quo ratione reiciendis rem repellendus temporibus, voluptates.</p>
+    </div>
+</div>

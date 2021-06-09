@@ -4,6 +4,7 @@
      <resources>
         <resource id="Magento_Backend::admin">
            <resource id="Ziffity_Feedback::customer_feedback" title="Customer Feedback"></resource>
+           <resource id="Ziffity_Preorder::preorder_form" title="Preorder Form"></resource>
         </resource>
      </resources>
    </acl>

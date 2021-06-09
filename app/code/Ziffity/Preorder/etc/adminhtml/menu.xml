@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Ziffity_Preorder::preorder_view" title="Product Preorder" module="Ziffity_Preorder" sortOrder="32" action="viewpreorder/preorder/index" resource="Ziffity_Preorder::preorder_form"/>
+    </menu>
+</config>

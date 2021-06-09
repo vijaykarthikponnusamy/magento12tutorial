@@ -8,4 +8,21 @@
             </argument>
         </arguments>
     </type>
+
+     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="ziffity_feedback_view_listing_preorder_data_source" xsi:type="string">Ziffity\Feedback\Model\ResourceModel\Preorder\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Ziffity\Feedback\Controller\Index\Example">
+        <plugin name="Ziffity_Feedback_PluginA" type="Ziffity\Feedback\Plugin\PluginA" sortOrder="10" />
+    </type>
+
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="Ziffity_Feedback_BrandPlugin" type="Ziffity\Feedback\Plugin\BrandPlugin" sortOrder="10" />
+    </type>
+
 </config>

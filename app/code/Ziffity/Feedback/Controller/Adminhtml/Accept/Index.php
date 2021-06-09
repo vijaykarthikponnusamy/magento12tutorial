@@ -69,8 +69,8 @@ class Index extends \Magento\Backend\App\Action
 
            $resultRedirect = $this->resultRedirectFactory->create();
            $resultRedirect->setPath('viewcustomfeedback/view/index');
-           return $resultRedirect;           
-       }
+           return $resultRedirect;
+        }
        else
        {
         $this->messageManager->addErrorMessage(__('Data not exit. Try again later.'));
