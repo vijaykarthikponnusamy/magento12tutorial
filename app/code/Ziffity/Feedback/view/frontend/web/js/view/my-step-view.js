@@ -12,7 +12,7 @@ define([
      */
     return Component.extend({
         defaults: {
-            template: 'Ziffify_Feedback/mystep'
+            template: 'Ziffify_Feedback/view/frontend/web/template/mystep'
         },
 
         // add here your logic to display step,

@@ -31,30 +31,33 @@ class Statusupdate extends \Magento\Backend\App\Action
         $rowData = $this->gridFactory->create();
        
         if ($rowId) {
-           $rowData = $rowData->load($rowId);
-           $rowEmail = $rowData->getEmail();
-           $rowFname = $rowData->getFname();
+            $rowData = $rowData->load($rowId);
+            $rowEmail = $rowData->getEmail();
+            $rowFname = $rowData->getFname();
            
-           if ($rowData->getId())
-           {
+            if ($rowData->getId()) {
+               
+                if ($rowStatus == "1") {
+                    $status = "Pending";
+                } elseif ($rowStatus == "2") {
+                    $status = "Customer Notified";
+                } elseif ($rowStatus == "3") {
+                    $status = "Cancelled";
+                }
 
-                if($rowStatus == "1") { $status = "Pending";  } elseif($rowStatus == "2") { $status = "Customer Notified"; }
-                elseif($rowStatus == "3") {  $status = "Cancelled"; }
+                //Update status
+                $rowData->setStatus($status);
+                $rowData->save();
 
-               //Update status
-               $rowData->setStatus($status);
-               $rowData->save();
+                $this->messageManager->addSuccessMessage(__('Pre-order form successfully updated .'));
+            }
 
-               $this->messageManager->addSuccessMessage(__('Pre-order form successfully updated .'));
-           }
-
-           $resultRedirect = $this->resultRedirectFactory->create();
-           $resultRedirect->setPath('viewpreorder/preorder/index');
-           return $resultRedirect;           
-       }
-       else
-       {
-        $this->messageManager->addErrorMessage(__('Data not exit. Try again later.'));
-       }
+            $resultRedirect = $this->resultRedirectFactory->create();
+            $resultRedirect->setPath('customerpreorder/preorder/index');
+            return $resultRedirect;
+            
+        } else {
+            $this->messageManager->addErrorMessage(__('Data not exit. Try again later.'));
+        }
     }
 }

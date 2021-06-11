@@ -9,16 +9,16 @@ use Magento\Ui\Component\Listing\Columns\Column;
 class Actions extends Column {
 
     /** Url path */
-    const URL_PATH_APPROVE = 'viewpreorder/preorder/statusupdate';
+    const URL_PATH_APPROVE = 'customerpreorder/preorder/statusupdate';
 
     protected $actionUrlBuilder;
     protected $urlBuilder;
 
     public function __construct(
-        ContextInterface $context, 
-        UiComponentFactory $uiComponentFactory, 
-        UrlInterface $urlBuilder, 
-        array $components = [], 
+        ContextInterface $context,
+        UiComponentFactory $uiComponentFactory,
+        UrlInterface $urlBuilder,
+        array $components = [],
         array $data = []
     ) {
         $this->urlBuilder = $urlBuilder;

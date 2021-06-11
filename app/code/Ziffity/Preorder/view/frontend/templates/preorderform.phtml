@@ -1,27 +1,18 @@
-<link rel='stylesheet' href='<?php echo $block->getViewFileUrl("Ziffity_Preorder::css/toggleButton.css") ?>' />
+
 <script>
-    require(['jquery', 'myscript'], function($, myscript) {
-        myscript();
-    });
+require(['jquery', 'myscript'], function($, myscript) {
+            myscript();
+        });
 </script>
 
-<table class="chk_tbl">
-    <tr>
-        <td><b>Pre Order</b></td>
-        <td>
-            <!-- data-bind='checked: CheckVal' -->
-            <label class="switch"> 
-                <input type="checkbox" name="preOrderCheck" value="on">
-                <span class="slider round"></span>
-            </label>
-        </td>
-    </tr>
-</table>
+<button class="primary toggleBtnShow">Pre-order Form</button>
+<button class="primary toggleBtnHide">Hide Pre-order Form</button> 
 
 <div class="row" id="preOrderForm">
     <div class="col-md-8">
+      <br />
         <form name="addData" method="post" id="addData" class="form"
-              action="preorderform/preorderform/submit"
+              action="customerpreorder/preorder/submit"
               data-hasrequired="<?= $block->escapeHtmlAttr(__('* Required Fields')) ?>"
               data-mage-init='{"validation":{}}'>
             <fieldset class="fieldset">
@@ -33,7 +24,7 @@
                                 escapeHtmlAttr(__('First Name')) ?></span></label>
                             <div class="control">
                                 <input name="fname" id="fname" title="First Name" class="input-text" type="text"
-                                       data-validate="{required:true, 'validate-alphanum-with-spaces':true}">
+                                       data-validate="{required:true, 'validate-alphanum-with-spaces':true, 'auto-fil'}">
                             </div>
                         </div>
                         <div class="field name required">
@@ -82,3 +73,4 @@
         </form>
     </div>
 </div>
+

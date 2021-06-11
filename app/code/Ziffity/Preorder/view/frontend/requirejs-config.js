@@ -1,7 +1,7 @@
 var config = {
     map: {
-            '*': {
-                myscript: 'js/checkbox_check'
-            }
+        '*': {
+            myscript: 'Ziffity_Preorder/js/customToggle'
         }
-    };
+    }
+}

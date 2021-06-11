@@ -30,28 +30,30 @@
         <paging name="listing_paging"/>
 
          <massaction name="listing_massaction">
-            <!-- <action name="custommassaction">
-                <settings>
-                    <confirm>
-                        <message translate="true">Are you sure to perform Action for selected customers?</message>
-                        <title translate="true">Send Mail</title>
-                    </confirm>
-                    <url path="viewpreorder/preorder/sendemail">
-                        <param name="sendmail">1</param>
-                    </url>    
-                    <type>custommassaction</type>
-                    <label translate="true">Email to Customer</label>
-                </settings>
-            </action> -->
+            
             <action name="sendemail">
                 <argument name="data" xsi:type="array">
                     <item name="config" xsi:type="array">
                         <item name="type" xsi:type="string">sendemail</item>
                         <item name="label" xsi:type="string" translate="true">Email to Customer</item>
-                        <item name="url" xsi:type="url" path="viewpreorder/preorder/sendemail"/>
+                        <item name="url" xsi:type="url" path="customerpreorder/preorder/submit"/>
                         <item name="confirm" xsi:type="array">
                             <item name="title" xsi:type="string" translate="true">Send Email</item>
                             <item name="message" xsi:type="string" translate="true">Are you sure you wan't to send confirmation email to selected customer?</item>
+                        </item>
+                    </item>
+                </argument>
+            </action>
+
+            <action name="sendcancelemail">
+                <argument name="data" xsi:type="array">
+                    <item name="config" xsi:type="array">
+                        <item name="type" xsi:type="string">sendcancelemail</item>
+                        <item name="label" xsi:type="string" translate="true">Cancel Pre-order</item>
+                        <item name="url" xsi:type="url" path="customerpreorder/preorder/cancelsubmit"/>
+                        <item name="confirm" xsi:type="array">
+                            <item name="title" xsi:type="string" translate="true">Confirm</item>
+                            <item name="message" xsi:type="string" translate="true">Are you sure you want to cancel pre-order from selected customer?</item>
                         </item>
                     </item>
                 </argument>

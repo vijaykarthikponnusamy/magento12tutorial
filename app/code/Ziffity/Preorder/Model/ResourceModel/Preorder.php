@@ -1,10 +1,12 @@
 <?php
 namespace Ziffity\Preorder\Model\ResourceModel;
 
-class Preorder extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
+use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
+
+class Preorder extends AbstractDb
 {
     protected function _construct()
     {
-        $this->_init('preorder_form','id');
+        $this->_init('preorder_form', 'id');
     }
 }

@@ -1,11 +1,12 @@
 <?php
 namespace Ziffity\Preorder\Model\ResourceModel\Preorder;
 
-use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
-
-class Collection extends AbstractCollection
+class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {
-    public function __construct()
+    /**
+     * Define model & resource model
+     */
+    protected function _construct()
     {
         $this->_init(
             'Ziffity\Preorder\Model\Preorder',

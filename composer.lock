@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c66fc098bc2b69d4d0cbc358f8b99ea9",
+    "content-hash": "a7d406bbeac26e4252c516f6c717224b",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -17768,6 +17768,51 @@
                 "source": "https://github.com/magento/zf1/tree/1.14.5"
             },
             "time": "2020-12-02T21:12:59+00:00"
+        },
+        {
+            "name": "mageplaza/module-banner-slider",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-banner-slider.git",
+                "reference": "d992ae0abd5466d71015a5db45e2e3c9222468dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-banner-slider/zipball/d992ae0abd5466d71015a5db45e2e3c9222468dc",
+                "reference": "d992ae0abd5466d71015a5db45e2e3c9222468dc",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.4.5"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\BannerSlider\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "support@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Technical Support"
+                }
+            ],
+            "description": "Magento 2 Banner Slider extension",
+            "support": {
+                "issues": "https://github.com/mageplaza/magento-2-banner-slider/issues",
+                "source": "https://github.com/mageplaza/magento-2-banner-slider/tree/v4.0.1"
+            },
+            "time": "2021-05-31T12:07:01+00:00"
         },
         {
             "name": "mageplaza/module-core",
